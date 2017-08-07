@@ -9,6 +9,8 @@
 {
     <p>Hello, @User.Identity.Name.</p>
 
+    <p>@Html.ActionLink("To Do List", "Index", "ToDo")</p>
+
     @using (Html.BeginForm("LogOff", "Account"))
     {
         <input type="submit" value="Log out" />

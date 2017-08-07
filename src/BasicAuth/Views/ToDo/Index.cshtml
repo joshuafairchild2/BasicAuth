@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BasicAuth.Models.Item>
+@{
+    ViewData["Title"] = "ToDo - All Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Here is your list of tasks, @User.Identity.Name</h2>
+<hr />
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li>@Html.DisplayFor(modelItem => listItem.Description)</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No tasks have been added yet!</p>
+}
+
+<p>
+    @Html.ActionLink("Back to profile", "Index", "Account")
+</p>
+
+<p>
+    @Html.ActionLink("Create new", "Create")
+</p>
