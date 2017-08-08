@@ -1,0 +1,23 @@
+﻿@model CreateRoleViewModel
+@using BasicAuth.ViewModels
+@{ 
+    ViewData["Title"] = "Roles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create role</h2>
+@Html.ActionLink("View Roles", "Index") | @Html.ActionLink("Manage User Roles","ManageUserRoles")
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div>
+        Role name
+    </div>
+    <p>
+        @Html.TextBoxFor(model => model.RoleName)
+    </p>
+    <input type="submit" value="Save"/>
+}

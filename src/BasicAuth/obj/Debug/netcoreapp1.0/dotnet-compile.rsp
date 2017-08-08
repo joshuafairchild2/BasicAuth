@@ -1,5 +1,5 @@
---temp-output:c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\obj\Debug\netcoreapp1.0\
---out:c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\bin\Debug\netcoreapp1.0\BasicAuth.dll
+--temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\bin\Debug\netcoreapp1.0\BasicAuth.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -199,18 +199,20 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\obj\Debug\netcoreapp1.0\BasicAuthdotnet-compile.deps.json",BasicAuth.deps.json
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Program.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Startup.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Controllers\AccountController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Controllers\ToDoController.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807153841_Initial.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807153841_Initial.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807173330_AddItemTable.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807173330_AddItemTable.Designer.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\ApplicationDbContextModelSnapshot.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Models\ApplicationDbContext.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Models\ApplicationUser.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\Models\Item.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\ViewModels\LoginViewModel.cs
-c:\users\epicodus\documents\visual studio 2015\Projects\BasicAuth\src\BasicAuth\ViewModels\RegisterViewModel.cs
+--resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\obj\Debug\netcoreapp1.0\BasicAuthdotnet-compile.deps.json",BasicAuth.deps.json
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Program.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Startup.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Controllers\AccountController.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Controllers\RolesController.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Controllers\ToDoController.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807153841_Initial.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807153841_Initial.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807173330_AddItemTable.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\20170807173330_AddItemTable.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Models\ApplicationDbContext.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Models\ApplicationUser.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\Models\Item.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\ViewModels\CreateRoleViewModel.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\ViewModels\LoginViewModel.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\BasicAuth\src\BasicAuth\ViewModels\RegisterViewModel.cs
