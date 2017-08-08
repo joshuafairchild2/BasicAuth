@@ -1,13 +1,13 @@
 ﻿@{
-    ViewBag["Title"] = "ManageUserRoles";
+    ViewData["Title"] = "ManageUserRoles";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Manage User Roles</h2>
-@*@Html.ActionLink("Create New Role", "Create") | @Html.ActionLink("Manage User Role", "ManageUserRoles")
+@Html.ActionLink("Create New Role", "Create") | @Html.ActionLink("Manage User Role", "ManageUserRoles")
     <hr />
 
-    <h2>Role Add to User</h2>
+    <h2>Add role to a user</h2>
 
     @using (Html.BeginForm("AddRoleToUser", "Roles"))
     {
@@ -61,4 +61,4 @@
         </p>
 
         <input type="submit" value="Delete this user from Role" />
-    }*@
+    }

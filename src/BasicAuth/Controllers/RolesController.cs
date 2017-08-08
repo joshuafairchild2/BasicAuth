@@ -16,12 +16,13 @@ namespace BasicAuth.Controllers
     public class RolesController : Controller
     {
         private readonly ApplicationDbContext _db;
-        private readonly RoleManager<IdentityRole> _rm;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public RolesController(ApplicationDbContext db, RoleManager<IdentityRole> rm)
+
+        public RolesController(ApplicationDbContext db, UserManager<ApplicationUser> userManager)
         {
             _db = db;
-            _rm = rm;
+            _userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -77,34 +78,53 @@ namespace BasicAuth.Controllers
             return RedirectToAction("Index");
         }
 
-        //public IActionResult ManageUserRoles()
-        //{
-        //    List<SelectListItem> roles = _db.Roles.OrderBy(role => role.Name).ToList().Select(r =>
-        //        new SelectListItem { Value = r.Name.ToString(), Text = r.Name }).ToList();
-        //    ViewBag.Roles = roles;
-        //    return View();
-        //}
+        public IActionResult ManageUserRoles()
+        {
+            List<SelectListItem> list = _db.Roles.OrderBy(role => role.Name).ToList().Select(r =>
+                new SelectListItem { Value = r.Name.ToString(), Text = r.Name }).ToList();
+            ViewBag.Roles = list;
+            return View();
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> AddUserToRole(string UserName, string RoleName)
-        //{
-        //    try
-        //    {
-        //        ApplicationUser user = _db.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
-        //        AccountController account = new AccountController();
-        //        await account._userManager.AddToRoleAsync(user, RoleName);
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddRoleToUser(string UserName, string RoleName)
+        {
+            //try
+            //{
+            ApplicationUser user = _db.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
 
-        //        List<SelectListItem> list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
-        //        ViewBag.Roles = list;
+            await _userManager.AddToRoleAsync(user, RoleName);
 
-        //        return View("ManageUserRoles");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+            ViewBag.ResultMessage = "Role created successfully !";
+
+            //List<SelectListItem> list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+            //ViewBag.Roles = list;
+
+            return View("ManageUserRoles");
+            //}
+            //catch
+            //{
+                //return View("ManageUserRoles");
+            //}
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> GetRoles(string UserName)
+        {
+            if (!string.IsNullOrWhiteSpace(UserName))
+            {
+                ApplicationUser user = _db.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
+
+                ViewBag.RolesForThisUser = await _userManager.GetRolesAsync(user);
+
+                List<SelectListItem> list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+                ViewBag.Roles = list;
+            }
+
+            return View("ManageUserRoles");
+        }
 
     }
 }
